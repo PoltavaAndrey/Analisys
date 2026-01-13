@@ -1,4 +1,5 @@
 import yfinance as yf
+from Stock import Stock
 
 if __name__ == "__main__":
     stock = []
@@ -7,6 +8,5 @@ if __name__ == "__main__":
     histData = ticker.history(period="10y")
 
     for date, price in histData.iterrows():
-        stock.append(Stock(price, date))
-
-    print(stock)
+        stock.append(Stock(price["Close"], date))
+    

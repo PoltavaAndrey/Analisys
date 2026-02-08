@@ -1,0 +1,5 @@
+# Ignore data source files
+*.csv
+
+# Ignore archives
+*.zip
